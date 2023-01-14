@@ -77,6 +77,7 @@ import {
 import mcl from "mcl-wasm";
 import { maybeGetLogs } from "@ganache/console.log";
 import { TrieDB } from "./trie-db";
+import { celoRegistryProxy } from "./helpers/precompiled-contracts";
 
 const mclInitPromise = mcl.init(mcl.BLS12_381).then(() => {
   mcl.setMapToMode(mcl.IRTF); // set the right map mode; otherwise mapToG2 will return wrong values.
@@ -735,6 +736,20 @@ export default class Blockchain extends Emittery<BlockchainTypedEvents> {
       // commit accounts, but for forking.
       const stateManager = <DefaultStateManager>this.vm.stateManager;
       await stateManager.checkpoint();
+
+       // XXX: <CELO> Pre-deploy registry contract at static address
+       const registryProxy = celoRegistryProxy(initialAccounts[0].address);
+       await stateManager.putContractCode(
+         registryProxy.address,
+         registryProxy.code
+       );
+       await stateManager.putContractStorage(
+         registryProxy.address,
+         registryProxy.storageKey,
+         registryProxy.storageValue
+       );
+       // </CELO>
+       
       initialAccounts.forEach(account => {
         this.vm.eei.putAccount(account.address, account as any);
       });
