@@ -49,10 +49,10 @@
   ],
   "dependencies": {
     "@ethereumjs/common": "3.0.1",
-    "@ethereumjs/evm": "1.2.2",
+    "@ethereumjs/evm": "npm:@soloseng/ethereumjs-evm@1.2.4",
     "@ethereumjs/tx": "4.0.1",
     "@ethereumjs/util": "8.0.2",
-    "@ethereumjs/vm": "6.2.0",
+    "@ethereumjs/vm": "npm:@soloseng/ethereumjs-vm@6.2.3",
     "@ganache/ethereum-address": "0.7.0",
     "@ganache/rlp": "0.7.0",
     "@ganache/utils": "0.7.0",
