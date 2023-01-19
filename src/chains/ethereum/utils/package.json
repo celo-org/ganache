@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/ethereum-utils",
+  "name": "@celo/ganache-ethereum-utils",
   "publishConfig": {
     "access": "public"
   },

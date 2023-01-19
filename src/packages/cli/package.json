@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/cli",
+  "name": "@celo/ganache-cli",
   "publishConfig": {
     "access": "public"
   },
@@ -53,7 +53,7 @@
     "truffle"
   ],
   "devDependencies": {
-    "@ganache/ethereum": "0.8.1",
+    "@ganache/ethereum": "npm:@celo/ganache-ethereum@0.8.1",
     "@ganache/filecoin": "0.7.0",
     "@types/mocha": "9.0.0",
     "cross-env": "7.0.3",
@@ -64,8 +64,8 @@
   "dependencies": {
     "@ethereumjs/util": "8.0.2",
     "@ganache/colors": "0.4.0",
-    "@ganache/core": "0.8.1",
-    "@ganache/flavors": "0.8.1",
+    "@ganache/core": "npm:@celo/ganache-core@0.8.1",
+    "@ganache/flavors": "npm:@celo/ganache-flavors@0.8.1",
     "@ganache/options": "0.7.0",
     "@ganache/utils": "0.7.0",
     "@trufflesuite/ps-list": "0.0.3",

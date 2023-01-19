@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/flavors",
+  "name": "@celo/ganache-flavors",
   "publishConfig": {
     "access": "public"
   },
@@ -47,8 +47,8 @@
   ],
   "dependencies": {
     "@ganache/colors": "0.4.0",
-    "@ganache/ethereum": "0.8.1",
-    "@ganache/ethereum-options": "0.7.0",
+    "@ganache/ethereum": "npm:@celo/ganache-ethereum@0.8.1",
+    "@ganache/ethereum-options": "npm:@celo/ganache-ethereum-options@0.7.0",
     "@ganache/filecoin": "0.7.0",
     "@ganache/filecoin-options": "0.7.0",
     "@ganache/options": "0.7.0",

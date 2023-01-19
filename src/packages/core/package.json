@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/core",
+  "name": "@celo/ganache-core",
   "publishConfig": {
     "access": "public"
   },
@@ -48,8 +48,8 @@
     "tooling"
   ],
   "dependencies": {
-    "@ganache/ethereum": "0.8.1",
-    "@ganache/flavors": "0.8.1",
+    "@ganache/ethereum": "npm:@celo/ganache-ethereum@0.8.1",
+    "@ganache/flavors": "npm:@celo/ganache-flavors@0.8.1",
     "@ganache/options": "0.7.0",
     "@ganache/tezos": "0.7.0",
     "@ganache/utils": "0.7.0",

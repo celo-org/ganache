@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/ethereum-block",
+  "name": "@celo/ganache-ethereum-block",
   "publishConfig": {
     "access": "public"
   },
@@ -59,8 +59,8 @@
     "@ethereumjs/common": "3.0.1",
     "@ethereumjs/util": "8.0.2",
     "@ganache/ethereum-address": "0.7.0",
-    "@ganache/ethereum-transaction": "0.7.0",
-    "@ganache/ethereum-utils": "0.7.0",
+    "@ganache/ethereum-transaction": "npm:@celo/ganache-ethereum-transaction@0.7.0",
+    "@ganache/ethereum-utils": "npm:@celo/ganache-ethereum-utils@0.7.0",
     "@ganache/rlp": "0.7.0",
     "@ganache/utils": "0.7.0",
     "emittery": "0.10.0"
