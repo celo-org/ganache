@@ -6,7 +6,7 @@ import { EthereumProvider } from "../../../src/provider";
 import {
   EthereumOptionsConfig,
   EthereumProviderOptions
-} from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-options";
 import Wallet from "../../../src/wallet";
 import { SECP256K1_N } from "@ganache/secp256k1";
 import { Data, Quantity } from "@ganache/utils";

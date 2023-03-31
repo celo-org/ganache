@@ -1,5 +1,5 @@
 import assert from "assert";
 
-describe("@ganache/ethereum-utils", () => {
+describe("@celo/ganache-ethereum-utils", () => {
   it("needs tests");
 });

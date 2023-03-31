@@ -1,9 +1,9 @@
 import BN from "bn.js";
-import { RuntimeError, RETURN_TYPES } from "@ganache/ethereum-utils";
+import { RuntimeError, RETURN_TYPES } from "@celo/ganache-ethereum-utils";
 import { Quantity } from "@ganache/utils";
 import { RunTxOpts, RunTxResult, VM } from "@ethereumjs/vm";
 import type { InterpreterStep } from "@ethereumjs/evm/";
-import { RuntimeBlock } from "@ganache/ethereum-block";
+import { RuntimeBlock } from "@celo/ganache-ethereum-block";
 
 const bn = (val = 0): BN => new BN(val);
 const STIPEND = bn(2300);

@@ -1,5 +1,5 @@
 import Manager from "./manager";
-import { Tag, QUANTITY } from "@ganache/ethereum-utils";
+import { Tag, QUANTITY } from "@celo/ganache-ethereum-utils";
 import { Quantity, Data, BUFFER_ZERO } from "@ganache/utils";
 import type { Common } from "@ethereumjs/common";
 import Blockchain from "../blockchain";
@@ -7,13 +7,13 @@ import {
   Block,
   EthereumRawBlockHeader,
   serialize
-} from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-block";
 import { Address } from "@ganache/ethereum-address";
 import {
   GanacheRawBlockTransactionMetaData,
   TransactionFactory,
   TypedDatabaseTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import { GanacheLevelUp } from "../database";
 
 const LATEST_INDEX_KEY = BUFFER_ZERO;

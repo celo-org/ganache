@@ -17,11 +17,11 @@ import {
   WebSocket,
   HttpRequest
 } from "@trufflesuite/uws-js-unofficial";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 import {
   EthereumProviderOptions,
   EthereumLegacyProviderOptions
-} from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-options";
 import { bufferify } from "./helpers/bufferify";
 
 type ProviderOptions = EthereumProviderOptions | EthereumLegacyProviderOptions;

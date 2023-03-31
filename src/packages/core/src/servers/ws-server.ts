@@ -5,7 +5,7 @@ import {
 } from "@trufflesuite/uws-js-unofficial";
 import WebSocketCloseCodes from "./utils/websocket-close-codes";
 import { InternalOptions } from "../options";
-import * as Flavors from "@ganache/flavors";
+import * as Flavors from "@celo/ganache-flavors";
 import { PromiEvent } from "@ganache/utils";
 import { types } from "util";
 import { getFragmentGenerator } from "./utils/fragment-generator";

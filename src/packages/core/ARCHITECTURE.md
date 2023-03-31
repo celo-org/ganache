@@ -6,7 +6,7 @@
 
 <!--
 @startuml
-participant "@ganache/core" as Core
+participant "@celo/ganache-core" as Core
 -> Core : request
 activate Core
   Core -> Connector : parse

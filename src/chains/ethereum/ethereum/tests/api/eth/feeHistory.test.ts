@@ -5,7 +5,7 @@ import { Quantity } from "@ganache/utils";
 import {
   EIP1559FeeMarketRpcTransaction,
   LegacyRpcTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import { Ethereum } from "../../../src/api-types";
 
 let provider: EthereumProvider;

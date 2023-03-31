@@ -7,8 +7,8 @@ import {
   TypedDatabaseTransaction,
   GanacheRawBlockTransactionMetaData,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { StorageKeys } from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-transaction";
+import { StorageKeys } from "@celo/ganache-ethereum-utils";
 
 export type BlockHeader = {
   parentHash: Data;

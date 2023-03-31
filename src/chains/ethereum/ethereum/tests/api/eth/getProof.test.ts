@@ -4,7 +4,7 @@ import { EthereumProvider } from "../../../src/provider";
 import { Data, keccak, Quantity } from "@ganache/utils";
 import { KECCAK256_NULL } from "@ethereumjs/util";
 import { Trie } from "@ethereumjs/trie";
-import { Account } from "@ganache/ethereum-utils";
+import { Account } from "@celo/ganache-ethereum-utils";
 import { Address } from "@ganache/ethereum-address";
 
 describe("api", () => {

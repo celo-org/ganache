@@ -18,7 +18,7 @@ import {
   TraceTransactionOptions,
   EthereumRawAccount,
   TraceTransactionResult
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import type { InterpreterStep } from "@ethereumjs/evm";
 import { decode } from "@ganache/rlp";
 import { KECCAK256_RLP } from "@ethereumjs/util";
@@ -30,7 +30,7 @@ import {
   EVMResult,
   EVM
 } from "@ethereumjs/evm";
-import { EthereumInternalOptions, Hardfork } from "@ganache/ethereum-options";
+import { EthereumInternalOptions, Hardfork } from "@celo/ganache-ethereum-options";
 import {
   Quantity,
   Data,
@@ -52,8 +52,8 @@ import {
   InternalTransactionReceipt,
   VmTransaction,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { Block, RuntimeBlock, Snapshots } from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-transaction";
+import { Block, RuntimeBlock, Snapshots } from "@celo/ganache-ethereum-block";
 import {
   SimulationTransaction,
   applySimulationOverrides,

@@ -2,9 +2,9 @@ import getProvider from "../../helpers/getProvider";
 import assert from "assert";
 import { Data, Quantity } from "@ganache/utils";
 import { EthereumProvider } from "../../../src/provider";
-import { Transaction } from "@ganache/ethereum-transaction";
+import { Transaction } from "@celo/ganache-ethereum-transaction";
 import memdown from "memdown";
-import { EthereumProviderOptions } from "@ganache/ethereum-options/typings";
+import { EthereumProviderOptions } from "@celo/ganache-ethereum-options/typings";
 
 function between(x: number, min: number, max: number) {
   return x >= min && x <= max;

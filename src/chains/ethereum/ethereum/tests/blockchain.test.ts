@@ -2,11 +2,11 @@ import assert from "assert";
 import {
   EIP1559FeeMarketRpcTransaction,
   TransactionFactory
-} from "@ganache/ethereum-transaction";
-import { EthereumOptionsConfig } from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-transaction";
+import { EthereumOptionsConfig } from "@celo/ganache-ethereum-options";
 import Wallet from "../src/wallet";
 import Blockchain from "../src/blockchain";
-import { Block } from "@ganache/ethereum-block";
+import { Block } from "@celo/ganache-ethereum-block";
 
 describe("blockchain", async () => {
   describe("interval mining", () => {

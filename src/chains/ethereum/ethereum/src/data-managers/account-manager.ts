@@ -3,7 +3,7 @@ import {
   EthereumRawAccount,
   QUANTITY,
   Tag
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import { KECCAK256_NULL } from "@ethereumjs/util";
 import { Quantity, Data } from "@ganache/utils";
 import { Address } from "@ganache/ethereum-address";

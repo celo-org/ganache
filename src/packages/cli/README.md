@@ -1,3 +1,3 @@
-# `@ganache/cli`
+# `@celo/ganache-cli`
 
 > TODO: description

@@ -1,3 +1,3 @@
-# `@ganache/ethereum-utils`
+# `@celo/ganache-ethereum-utils`
 
 > TODO: description
