@@ -1,4 +1,4 @@
-import { Tag } from "@ganache/ethereum-utils";
+import { Tag } from "@celo/ganache-ethereum-utils";
 import { BUFFER_EMPTY, Data, Quantity } from "@ganache/utils";
 import { GanacheLevelUp } from "../../database";
 import { Tree } from "./tree";

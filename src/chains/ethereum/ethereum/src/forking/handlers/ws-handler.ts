@@ -1,5 +1,5 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
-import { AbortError } from "@ganache/ethereum-utils";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
+import { AbortError } from "@celo/ganache-ethereum-utils";
 import { AbortSignal } from "abort-controller";
 import WebSocket from "ws";
 import { Handler } from "../types";

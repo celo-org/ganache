@@ -1,7 +1,7 @@
 import assert from "assert";
 import { formatUptime } from "../src/detach";
 
-describe("@ganache/cli", () => {
+describe("@celo/ganache-cli", () => {
   describe("detach", () => {
     describe("formatUptime()", () => {
       const durations: [number, string][] = [

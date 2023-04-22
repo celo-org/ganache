@@ -1,6 +1,6 @@
 import { RequestCoordinator, Executor } from "@ganache/utils";
 import { EthereumProvider } from "../../src/provider";
-import { EthereumProviderOptions } from "@ganache/ethereum-options";
+import { EthereumProviderOptions } from "@celo/ganache-ethereum-options";
 
 export const mnemonic =
   "into trim cross then helmet popular suit hammer cart shrug oval student";

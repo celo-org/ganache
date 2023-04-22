@@ -23,12 +23,12 @@
       "path": "../address"
     },
     {
-      "name": "@ganache/ethereum-utils",
-      "path": "../utils"
-    },
-    {
       "name": "@ganache/secp256k1",
       "path": "../../../packages/secp256k1"
+    },
+    {
+      "name": "@celo/ganache-ethereum-utils",
+      "path": "../utils"
     }
   ]
 }

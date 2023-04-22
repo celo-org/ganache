@@ -1,4 +1,4 @@
-import { ConnectorsByName, DefaultFlavor, FlavorName } from "@ganache/flavors";
+import { ConnectorsByName, DefaultFlavor, FlavorName } from "@celo/ganache-flavors";
 import { KNOWN_CHAINIDS } from "@ganache/utils";
 import ConnectorLoader from "./src/connector-loader";
 import { ProviderOptions, ServerOptions } from "./src/options";
@@ -10,7 +10,7 @@ export type {
   Ethereum,
   EthereumProvider,
   FilecoinProvider
-} from "@ganache/flavors";
+} from "@celo/ganache-flavors";
 export type { ProviderOptions, ServerOptions } from "./src/options";
 export type _ExperimentalInfo = Readonly<{
   version: string;

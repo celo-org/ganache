@@ -1,5 +1,5 @@
 import type { Heap } from "@ganache/utils";
-import type { TypedTransaction } from "@ganache/ethereum-transaction";
+import type { TypedTransaction } from "@celo/ganache-ethereum-transaction";
 
 export default function replaceFromHeap(
   priced: Heap<TypedTransaction>,

@@ -1,4 +1,4 @@
-import { RuntimeBlock } from "@ganache/ethereum-block";
+import { RuntimeBlock } from "@celo/ganache-ethereum-block";
 import { Quantity, Data, hasOwn, keccak } from "@ganache/utils";
 import { Address } from "@ganache/ethereum-address";
 import { VM } from "@ethereumjs/vm";

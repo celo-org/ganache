@@ -1,5 +1,5 @@
 import { Address } from "@ganache/ethereum-address";
-import { BlockLogs, TransactionLog } from "@ganache/ethereum-utils";
+import { BlockLogs, TransactionLog } from "@celo/ganache-ethereum-utils";
 import { decode, digest, encodeRange } from "@ganache/rlp";
 import { Data, Quantity } from "@ganache/utils";
 import { AccessList } from "./access-lists";

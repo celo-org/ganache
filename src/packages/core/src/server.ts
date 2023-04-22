@@ -27,7 +27,7 @@ import {
   DefaultFlavor,
   FlavorName,
   FlavorOptions
-} from "@ganache/flavors";
+} from "@celo/ganache-flavors";
 import ConnectorLoader from "./connector-loader";
 import WebsocketServer, { WebSocketCapableFlavor } from "./servers/ws-server";
 import HttpServer from "./servers/http-server";

@@ -2,7 +2,7 @@ import type { AbstractLevelDOWN, AbstractIterator } from "abstract-leveldown";
 import Emittery from "emittery";
 import { dir, setGracefulCleanup } from "tmp-promise";
 import Blockchain from "./blockchain";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import sub from "subleveldown";
 import encode from "encoding-down";
 import leveldown from "leveldown";

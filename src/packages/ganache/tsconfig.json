@@ -3,22 +3,28 @@
   "compilerOptions": {
     "outDir": "lib"
   },
-  "include": ["index.ts", "src/**/*", "src/cli.ts"],
+  "include": [
+    "index.ts",
+    "src/**/*",
+    "src/cli.ts"
+  ],
   "paths": {
-    "@ganache/cli/src/cli": ["../cli/src/cli"]
+    "@ganache/cli/src/cli": [
+      "../cli/src/cli"
+    ]
   },
   "references": [
     {
-      "name": "@ganache/cli",
+      "name": "@celo/ganache-cli",
       "path": "../cli"
     },
     {
-      "name": "@ganache/flavors",
-      "path": "../flavors"
+      "name": "@celo/ganache-core",
+      "path": "../core"
     },
     {
-      "name": "@ganache/core",
-      "path": "../core"
+      "name": "@celo/ganache-flavors",
+      "path": "../flavors"
     }
   ]
 }

@@ -26,7 +26,7 @@ import {
   EIP1559FeeMarketTransactionJSON
 } from "./transaction-types";
 import secp256k1 from "@ganache/secp256k1";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 
 const bigIntMin = (...args: bigint[]) => args.reduce((m, e) => (e < m ? e : m));
 

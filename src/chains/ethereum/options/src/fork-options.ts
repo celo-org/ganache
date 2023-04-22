@@ -1,6 +1,6 @@
 import { normalize } from "./helpers";
 import { Definitions, UnionToTuple } from "@ganache/options";
-import { Tag } from "@ganache/ethereum-utils";
+import { Tag } from "@celo/ganache-ethereum-utils";
 import { URL } from "url";
 const version = process.env.VERSION || "DEV";
 

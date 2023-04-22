@@ -20,7 +20,7 @@ import { EthereumOptionsConfig } from "../../options";
 import { BUFFER_EMPTY, Quantity } from "@ganache/utils";
 import { SECP256K1_N } from "@ganache/secp256k1";
 
-describe("@ganache/ethereum-transaction", async () => {
+describe("@celo/ganache-ethereum-transaction", async () => {
   const common = Common.custom(
     {
       name: "ganache",
