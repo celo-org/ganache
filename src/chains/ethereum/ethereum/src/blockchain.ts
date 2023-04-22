@@ -30,7 +30,10 @@ import {
   EVMResult,
   EVM
 } from "@ethereumjs/evm";
-import { EthereumInternalOptions, Hardfork } from "@celo/ganache-ethereum-options";
+import {
+  EthereumInternalOptions,
+  Hardfork
+} from "@celo/ganache-ethereum-options";
 import {
   Quantity,
   Data,
@@ -737,19 +740,6 @@ export default class Blockchain extends Emittery<BlockchainTypedEvents> {
       const stateManager = <DefaultStateManager>this.vm.stateManager;
       await stateManager.checkpoint();
 
-       // XXX: <CELO> Pre-deploy registry contract at static address
-       const registryProxy = celoRegistryProxy(initialAccounts[0].address);
-       await stateManager.putContractCode(
-         registryProxy.address,
-         registryProxy.code
-       );
-       await stateManager.putContractStorage(
-         registryProxy.address,
-         registryProxy.storageKey,
-         registryProxy.storageValue
-       );
-       // </CELO>
-       
       initialAccounts.forEach(account => {
         this.vm.eei.putAccount(account.address, account as any);
       });
@@ -795,58 +785,122 @@ export default class Blockchain extends Emittery<BlockchainTypedEvents> {
           block,
           blockLogs: BlockLogs.create(hash)
         }));
+    } else {
+      // commit accounts, but for forking.
+      const stateManager = <DefaultStateManager>this.vm.stateManager;
+      await stateManager.checkpoint();
+
+      // XXX: <CELO> Pre-deploy registry contract at static address
+      const registryProxy = celoRegistryProxy(initialAccounts[0].address);
+      await stateManager.putContractCode(
+        registryProxy.address,
+        registryProxy.code
+      );
+      await stateManager.putContractStorage(
+        registryProxy.address,
+        registryProxy.storageKey,
+        registryProxy.storageValue
+      );
+      // </CELO>
+
+      initialAccounts.forEach(account => {
+        this.vm.eei.putAccount(account.address, account as any);
+      });
+      await stateManager.commit();
+
+      const rawBlockNumber = Quantity.Empty;
+
+      // create the genesis block
+      const baseFeePerGas = this.common.isActivatedEIP(1559)
+        ? Block.INITIAL_BASE_FEE_PER_GAS
+        : undefined;
+
+      const genesis = new RuntimeBlock(
+        rawBlockNumber,
+        Data.from(BUFFER_32_ZERO),
+        this.coinbase,
+        blockGasLimit,
+        Quantity.Zero,
+        Quantity.from(timestamp),
+        this.isPostMerge ? Quantity.Zero : this.#options.miner.difficulty,
+        Quantity.Zero, // we start the totalDifficulty at 0
+        // we use the initial trie root as the genesis block's mixHash as it
+        // is deterministic based on initial wallet conditions
+        this.isPostMerge ? keccak(this.trie.root()) : BUFFER_32_ZERO,
+        baseFeePerGas
+      );
+
+      // store the genesis block in the database
+      const { block, serialized } = genesis.finalize(
+        KECCAK256_RLP,
+        KECCAK256_RLP,
+        BUFFER_256_ZERO,
+        this.trie.root(),
+        0n,
+        this.#options.miner.extraData,
+        [],
+        new Map()
+      );
+      block.header.number = Quantity.Zero;
+      const hash = block.hash();
+      return this.blocks
+        .putBlock(block.header.number.toBuffer(), hash, serialized)
+        .then(_ => ({
+          block,
+          blockLogs: BlockLogs.create(hash)
+        }));
     }
 
-    await this.#commitAccounts(initialAccounts);
+    // await this.#commitAccounts(initialAccounts);
 
-    // README: block `0` is weird in that a `0` _should_ be hashed as `[]`,
-    // instead of `[0]`, so we set it to `Quantity.Empty` instead of
-    // `Quantity.Zero` here. A few lines down in this function we swap
-    // this `Quantity.Empty` for `Quantity.Zero`. This is all so we don't
-    // have to have a "treat empty as 0` check in every function that uses the
-    // "latest" block (which this genesis block will be for brief moment).
-    const rawBlockNumber = Quantity.Empty;
+    // // README: block `0` is weird in that a `0` _should_ be hashed as `[]`,
+    // // instead of `[0]`, so we set it to `Quantity.Empty` instead of
+    // // `Quantity.Zero` here. A few lines down in this function we swap
+    // // this `Quantity.Empty` for `Quantity.Zero`. This is all so we don't
+    // // have to have a "treat empty as 0` check in every function that uses the
+    // // "latest" block (which this genesis block will be for brief moment).
+    // const rawBlockNumber = Quantity.Empty;
 
-    // create the genesis block
-    const baseFeePerGas = this.common.isActivatedEIP(1559)
-      ? Block.INITIAL_BASE_FEE_PER_GAS
-      : undefined;
+    // // create the genesis block
+    // const baseFeePerGas = this.common.isActivatedEIP(1559)
+    //   ? Block.INITIAL_BASE_FEE_PER_GAS
+    //   : undefined;
 
-    const genesis = new RuntimeBlock(
-      rawBlockNumber,
-      Data.from(BUFFER_32_ZERO),
-      this.coinbase,
-      blockGasLimit,
-      Quantity.Zero,
-      Quantity.from(timestamp),
-      this.isPostMerge ? Quantity.Zero : this.#options.miner.difficulty,
-      Quantity.Zero, // we start the totalDifficulty at 0
-      // we use the initial trie root as the genesis block's mixHash as it
-      // is deterministic based on initial wallet conditions
-      this.isPostMerge ? keccak(this.trie.root()) : BUFFER_32_ZERO,
-      baseFeePerGas
-    );
+    // const genesis = new RuntimeBlock(
+    //   rawBlockNumber,
+    //   Data.from(BUFFER_32_ZERO),
+    //   this.coinbase,
+    //   blockGasLimit,
+    //   Quantity.Zero,
+    //   Quantity.from(timestamp),
+    //   this.isPostMerge ? Quantity.Zero : this.#options.miner.difficulty,
+    //   Quantity.Zero, // we start the totalDifficulty at 0
+    //   // we use the initial trie root as the genesis block's mixHash as it
+    //   // is deterministic based on initial wallet conditions
+    //   this.isPostMerge ? keccak(this.trie.root()) : BUFFER_32_ZERO,
+    //   baseFeePerGas
+    // );
 
-    // store the genesis block in the database
-    const { block, serialized } = genesis.finalize(
-      KECCAK256_RLP,
-      KECCAK256_RLP,
-      BUFFER_256_ZERO,
-      this.trie.root(),
-      0n,
-      this.#options.miner.extraData,
-      [],
-      new Map()
-    );
-    // README: set the block number to an actual 0 now.
-    block.header.number = Quantity.Zero;
-    const hash = block.hash();
-    return this.blocks
-      .putBlock(block.header.number.toBuffer(), hash, serialized)
-      .then(_ => ({
-        block,
-        blockLogs: BlockLogs.create(hash)
-      }));
+    // // store the genesis block in the database
+    // const { block, serialized } = genesis.finalize(
+    //   KECCAK256_RLP,
+    //   KECCAK256_RLP,
+    //   BUFFER_256_ZERO,
+    //   this.trie.root(),
+    //   0n,
+    //   this.#options.miner.extraData,
+    //   [],
+    //   new Map()
+    // );
+    // // README: set the block number to an actual 0 now.
+    // block.header.number = Quantity.Zero;
+    // const hash = block.hash();
+    // return this.blocks
+    //   .putBlock(block.header.number.toBuffer(), hash, serialized)
+    //   .then(_ => ({
+    //     block,
+    //     blockLogs: BlockLogs.create(hash)
+    //   }));
   };
 
   /**
