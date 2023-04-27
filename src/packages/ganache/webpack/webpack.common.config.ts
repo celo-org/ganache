@@ -15,16 +15,16 @@ const GANACHE_FILECOIN_VERSION = require(join(
 
 let INFURA_KEY = process.env.INFURA_KEY;
 
-// TODO: (@soloseng) add Infura key
+// TODO: (@soloseng) add Infura key?
 // if we don't have an INFURA_KEY at build time we should bail!
-// if (
-//   !INFURA_KEY &&
-//   process.env.CREATE_BROKEN_BUILD !== "I WILL NOT PUBLISH THIS"
-// ) {
-//   throw new Error(
-//     'The `INFURA_KEY` environment variable was not supplied at build time. To bypass this check set the environment variable `CREATE_BROKEN_BUILD` to `"I WILL NOT PUBLISH THIS"`.'
-//   );
-// }
+if (
+  !INFURA_KEY &&
+  process.env.CREATE_BROKEN_BUILD !== "I WILL NOT PUBLISH THIS"
+) {
+  throw new Error(
+    'The `INFURA_KEY` environment variable was not supplied at build time. To bypass this check set the environment variable `CREATE_BROKEN_BUILD` to `"I WILL NOT PUBLISH THIS"`.'
+  );
+}
 
 // validate INFURA_KEY
 if (INFURA_KEY) {
@@ -50,6 +50,9 @@ const base: webpack.Configuration = {
         ]
       }
     ]
+  },
+  experiments: {
+    topLevelAwait: true
   },
   resolve: {
     extensions: [".ts", ".js"]
