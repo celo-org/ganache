@@ -12,7 +12,7 @@ Github actions and workflows have been disabled to prevent auto publishing. Inst
     - Commit changes
     - `npm run publish`
 
-Relevant packages with inter dependencies.
+Relevant packages with inter dependencies that were updated to make this fork work:
 1. @celo/ganache-ethereum-utils
 2. @celo/ganache-ethereum-transaction
 3. @celo/ganache-ethereum-options 
