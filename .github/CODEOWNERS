@@ -1,4 +1,4 @@
-# global code owner:
+<!-- # global code owner:
 
 *       @davidmurdoch
 
@@ -18,4 +18,4 @@ src/chains/ethereum/ethereum/src/transaction-pool.ts @MicaiahReid
 
 # miner:
 
-src/chains/ethereum/ethereum/src/miner @MicaiahReid
+src/chains/ethereum/ethereum/src/miner @MicaiahReid -->
