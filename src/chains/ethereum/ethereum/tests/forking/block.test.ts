@@ -1,5 +1,6 @@
 import assert from "assert";
 import getProvider from "../helpers/getProvider";
+import skipIfNoInfuraKey from "../helpers/skipIfNoInfuraKey";
 import { EthereumProvider } from "../../src/provider";
 import request from "superagent";
 
@@ -11,10 +12,10 @@ describe("forking", function () {
     const blockNumHex = `0x${blockNumber.toString(16)}`;
     const URL = "https://mainnet.infura.io/v3/" + process.env.INFURA_KEY;
     let provider: EthereumProvider;
-    before(async function () {
-      if (!process.env.INFURA_KEY) {
-        this.skip();
-      }
+
+    skipIfNoInfuraKey();
+
+    before(async () => {
       provider = await getProvider({
         fork: {
           url: URL,
@@ -52,7 +53,10 @@ describe("forking", function () {
         "earliest",
         true
       ]);
-      assert.deepStrictEqual(parseInt(block.number), parseInt(remoteBlock.number));
+      assert.deepStrictEqual(
+        parseInt(block.number),
+        parseInt(remoteBlock.number)
+      );
       assert.deepStrictEqual(block.hash, remoteBlock.hash);
     });
 
@@ -83,6 +87,21 @@ describe("forking", function () {
       const block0 = JSON.parse(req.text).result;
       const block = await provider.send("eth_getBlockByNumber", ["0x0", true]);
       assert.deepStrictEqual(block, block0);
+    });
+
+    it("should get transaction count by hash from the original chain", async () => {
+      const block = await provider.send("eth_getBlockByNumber", [
+        "0xB443",
+        true
+      ]);
+      const blockTransactionCountByHash = await provider.send(
+        "eth_getBlockTransactionCountByHash",
+        [block.hash]
+      );
+      assert.deepStrictEqual(
+        block.transactions.length,
+        parseInt(blockTransactionCountByHash)
+      );
     });
   });
 });
