@@ -827,15 +827,15 @@ export default class Blockchain extends Emittery<BlockchainTypedEvents> {
 
       await this.#commitAccounts(initialAccounts);
 
-      // // README: block `0` is weird in that a `0` _should_ be hashed as `[]`,
-      // // instead of `[0]`, so we set it to `Quantity.Empty` instead of
-      // // `Quantity.Zero` here. A few lines down in this function we swap
-      // // this `Quantity.Empty` for `Quantity.Zero`. This is all so we don't
-      // // have to have a "treat empty as 0` check in every function that uses the
-      // // "latest" block (which this genesis block will be for brief moment).
+      // README: block `0` is weird in that a `0` _should_ be hashed as `[]`,
+      // instead of `[0]`, so we set it to `Quantity.Empty` instead of
+      // `Quantity.Zero` here. A few lines down in this function we swap
+      // this `Quantity.Empty` for `Quantity.Zero`. This is all so we don't
+      // have to have a "treat empty as 0` check in every function that uses the
+      // "latest" block (which this genesis block will be for brief moment).
       const rawBlockNumber = Quantity.Empty;
 
-      // // create the genesis block
+      // create the genesis block
       const baseFeePerGas = this.common.isActivatedEIP(1559)
         ? Block.INITIAL_BASE_FEE_PER_GAS
         : undefined;
