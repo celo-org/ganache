@@ -71,7 +71,7 @@ export class PersistentCache {
       const tree: Tree = {};
       const collection = {};
       for await (const data of rs) {
-        const { key, value } = (data as any) as { key: Buffer; value: Buffer };
+        const { key, value } = data as any as { key: Buffer; value: Buffer };
 
         const node = Tree.deserialize(key, value);
         (node as any).height = node.decodeKey().height.toNumber();
@@ -115,6 +115,7 @@ export class PersistentCache {
 
     const store = encode(leveldown(directory, leveldownOpts), levelupOptions);
     const db = await new Promise<LevelUp>((resolve, reject) => {
+      // @ts-ignore
       const db = levelup(store, (err: Error) => {
         if (err) return void reject(err);
         resolve(db);
@@ -125,7 +126,7 @@ export class PersistentCache {
     cache.ancestorDb = sub(db, "a", levelupOptions);
     await cache.cacheDb.open();
     await cache.ancestorDb.open();
-
+    // @ts-ignore
     await setDbVersion(cache.db, cache.version);
     return cache;
   }
@@ -134,17 +135,15 @@ export class PersistentCache {
     this.hash = hash;
     this.request = request;
 
-    const {
-      targetBlock,
-      closestAncestor,
-      previousClosestAncestor
-    } = await resolveTargetAndClosestAncestor(
-      this.ancestorDb,
-      this.request,
-      height,
-      hash
-    );
-
+    const { targetBlock, closestAncestor, previousClosestAncestor } =
+      await resolveTargetAndClosestAncestor(
+        // @ts-ignore
+        this.ancestorDb,
+        this.request,
+        height,
+        hash
+      );
+    // @ts-ignore
     this.ancestry = new Ancestry(this.ancestorDb, closestAncestor);
 
     const atomicBatch = this.ancestorDb.batch();
@@ -264,6 +263,7 @@ export class PersistentCache {
     const startSize = closestKnownDescendants.length;
 
     for await (const maybeDescendant of findClosestDescendants(
+      // @ts-ignore
       this.ancestorDb,
       this.request,
       height
@@ -336,7 +336,7 @@ export class PersistentCache {
     });
     const hashBuf = this.hash.toBuffer();
     for await (const data of readStream) {
-      const { key: k, value } = (data as any) as { key: Buffer; value: Buffer };
+      const { key: k, value } = data as any as { key: Buffer; value: Buffer };
       const [_height, _key, blockHash] = lexico.decode(k);
       // if our key no longer matches make sure we don't keep searching
       if (!_key.equals(bufKey)) return;

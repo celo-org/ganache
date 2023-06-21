@@ -58,6 +58,7 @@ export default class Database extends Emittery {
     let db: LevelUp;
     if (store) {
       this.#rootStore = encode(store as any, levelupOptions);
+      // @ts-ignore
       db = levelup(this.#rootStore, {});
     } else {
       let directory = this.#options.dbPath;
@@ -75,6 +76,7 @@ export default class Database extends Emittery {
       const leveldownOpts = { prefix: "" };
       const store = encode(leveldown(directory, leveldownOpts), levelupOptions);
       this.#rootStore = store;
+      // @ts-ignore
       db = levelup(store);
     }
 
@@ -82,6 +84,7 @@ export default class Database extends Emittery {
     if (this.#closed) return this.#cleanup();
 
     const open = db.open();
+    // @ts-ignore
     this.trie = sub(db, "T", levelupOptions);
 
     this.db = db;
@@ -89,12 +92,17 @@ export default class Database extends Emittery {
 
     // don't continue if we closed while we were waiting for it to open
     if (this.#closed) return this.#cleanup();
-
+    // @ts-ignore
     this.blocks = sub(db, "b", levelupOptions);
+    // @ts-ignore
     this.blockIndexes = sub(db, "i", levelupOptions);
+    // @ts-ignore
     this.blockLogs = sub(db, "l", levelupOptions);
+    // @ts-ignore
     this.transactions = sub(db, "t", levelupOptions);
+    // @ts-ignore
     this.transactionReceipts = sub(db, "r", levelupOptions);
+    // @ts-ignore
     this.storageKeys = sub(db, "s", levelupOptions);
     return this.emit("ready");
   };

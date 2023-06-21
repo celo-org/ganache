@@ -56,7 +56,9 @@ export class ForkTrie extends GanacheTrie {
       this.metadata = new CheckpointDB(MetadataSingletons.get(db));
     } else {
       const metadataDb = sub(db, "f", LEVELDOWN_OPTIONS);
+      // @ts-ignore
       MetadataSingletons.set(db, metadataDb);
+      // @ts-ignore
       this.metadata = new CheckpointDB(metadataDb);
     }
   }
