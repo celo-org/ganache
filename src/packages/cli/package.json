@@ -1,9 +1,9 @@
 {
-  "name": "@ganache/cli",
+  "name": "@celo/ganache-cli",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
+  "version": "0.1.2-beta.2",
   "description": "",
   "author": "David Murdoch",
   "homepage": "https://github.com/trufflesuite/ganache/tree/develop/src/packages/cli#readme",
@@ -53,7 +53,7 @@
     "truffle"
   ],
   "devDependencies": {
-    "@ganache/ethereum": "0.1.1",
+    "@celo/ganache-ethereum": "0.1.2-beta.2",
     "@ganache/filecoin": "0.1.1",
     "@types/mocha": "9.0.0",
     "cross-env": "7.0.3",
@@ -63,8 +63,8 @@
   },
   "dependencies": {
     "@ganache/colors": "0.1.1",
-    "@ganache/core": "0.1.1",
-    "@ganache/flavors": "0.1.1",
+    "@celo/ganache-core": "0.1.2-beta.2",
+    "@celo/ganache-flavors": "0.1.2-beta.2",
     "@ganache/options": "0.1.1",
     "@ganache/utils": "0.1.1",
     "@types/node": "17.0.0",

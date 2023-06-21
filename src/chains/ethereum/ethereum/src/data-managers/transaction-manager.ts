@@ -1,6 +1,6 @@
 import Manager from "./manager";
 import TransactionPool from "../transaction-pool";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { LevelUp } from "levelup";
 import Blockchain from "../blockchain";
 import PromiseQueue from "@ganache/promise-queue";
@@ -11,7 +11,7 @@ import {
   TransactionFactory,
   TypedRpcTransaction,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 
 // since our Manager needs to receive and Instantiable class with a
 // consistent return type and our transaction factory can return

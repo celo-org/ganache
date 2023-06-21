@@ -4,7 +4,7 @@ import {
   DefaultFlavor,
   FilecoinFlavorName,
   DefaultOptionsByName
-} from "@ganache/flavors";
+} from "@celo/ganache-flavors";
 import {
   Base,
   Definitions,
@@ -15,7 +15,7 @@ import chalk from "chalk";
 import { EOL } from "os";
 import marked from "marked";
 import TerminalRenderer from "marked-terminal";
-import { _DefaultServerOptions } from "@ganache/core";
+import { _DefaultServerOptions } from "@celo/ganache-core";
 
 marked.setOptions({
   renderer: new TerminalRenderer({

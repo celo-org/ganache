@@ -1,5 +1,5 @@
 import { BN } from "ethereumjs-util";
-import { RuntimeError, RETURN_TYPES } from "@ganache/ethereum-utils";
+import { RuntimeError, RETURN_TYPES } from "@celo/ganache-ethereum-utils";
 import { RPCQUANTITY_EMPTY } from "@ganache/utils";
 
 const bn = (val = 0) => new (BN as any)(val);

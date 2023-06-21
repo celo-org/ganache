@@ -1,8 +1,8 @@
 import {
   Connector as EthereumConnector,
   Provider as EthereumProvider
-} from "@ganache/ethereum";
-export type {Provider as EthereumProvider} from "@ganache/ethereum";
+} from "@celo/ganache-ethereum";
+export type {Provider as EthereumProvider} from "@celo/ganache-ethereum";
 export type {Provider as FilecoinProvider} from "@ganache/filecoin";
 import type {
   Connector as FilecoinConnector,
@@ -12,7 +12,7 @@ import {
   EthereumDefaults,
   EthereumProviderOptions,
   EthereumLegacyProviderOptions
-} from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-options";
 import {
   FilecoinDefaults,
   FilecoinProviderOptions,

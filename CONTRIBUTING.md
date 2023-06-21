@@ -131,7 +131,7 @@ will add our local `@ganache/options` package to the `@ganache/filecoin` package
 - Press <kbd>F5</kbd> (or select `Run` 🡺 `Start Debugging` from the menu bar) to automatically start debugging.
 
 To change which files are debugged update your `.vscode/launch.json` file glob to match your target files. Here is an
-example to debug only test files in the `@ganache/ethereum` package:
+example to debug only test files in the `@celo/ganache-ethereum` package:
 
 ```diff
 diff --git a/.vscode/launch.json b/.vscode/launch.json

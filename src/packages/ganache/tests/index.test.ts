@@ -1,6 +1,6 @@
 import assert from "assert";
 import ganache from "..";
 
-describe("@ganache/ganache", () => {
+describe("@celo/ganache-ganache", () => {
   it("needs tests");
 });

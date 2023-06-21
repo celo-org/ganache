@@ -8,7 +8,7 @@ import {
   BUFFER_ZERO
 } from "@ganache/utils";
 import Blockchain from "../blockchain";
-import { TransactionReceipt } from "@ganache/ethereum-transaction";
+import { TransactionReceipt } from "@celo/ganache-ethereum-transaction";
 import { Address } from "@ganache/ethereum-address";
 
 export default class TransactionReceiptManager extends Manager<TransactionReceipt> {

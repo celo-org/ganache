@@ -17,7 +17,7 @@ import {
   TypedDatabaseTransaction
 } from "./raw";
 import { decode } from "@ganache/rlp";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 import { TypedTransaction } from "./transaction-types";
 import { EIP1559FeeMarketTransaction } from "./eip1559-fee-market-transaction";
 

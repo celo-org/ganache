@@ -2,7 +2,7 @@ import {
   RuntimeError,
   RETURN_TYPES,
   TransactionLog
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import {
   Data,
   Quantity,

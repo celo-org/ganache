@@ -6,7 +6,7 @@ import {
 } from "@trufflesuite/uws-js-unofficial";
 import ContentTypes from "./utils/content-types";
 import HttpResponseCodes from "./utils/http-response-codes";
-import { Connector } from "@ganache/flavors";
+import { Connector } from "@celo/ganache-flavors";
 import { InternalOptions } from "../options";
 import { types } from "util";
 

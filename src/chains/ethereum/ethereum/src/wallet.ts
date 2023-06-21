@@ -1,4 +1,4 @@
-import { Account } from "@ganache/ethereum-utils";
+import { Account } from "@celo/ganache-ethereum-utils";
 import {
   createAccountFromSeed,
   createAccountGeneratorFromSeedAndPath,
@@ -20,7 +20,7 @@ import { alea } from "seedrandom";
 import crypto from "crypto";
 import createKeccakHash from "keccak";
 import { writeFileSync } from "fs";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { Address } from "@ganache/ethereum-address";
 
 //#region Constants

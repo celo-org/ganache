@@ -1,5 +1,5 @@
-import { DefaultFlavor, FlavorName } from "@ganache/flavors";
-import { ServerOptions } from "@ganache/core";
+import { DefaultFlavor, FlavorName } from "@celo/ganache-flavors";
+import { ServerOptions } from "@celo/ganache-core";
 
 type CliOptions = {
   host: string;

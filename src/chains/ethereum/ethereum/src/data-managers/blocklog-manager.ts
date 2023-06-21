@@ -1,4 +1,4 @@
-import { BlockLogs, FilterArgs } from "@ganache/ethereum-utils";
+import { BlockLogs, FilterArgs } from "@celo/ganache-ethereum-utils";
 import { LevelUp } from "levelup";
 import Manager from "./manager";
 import { Quantity } from "@ganache/utils";

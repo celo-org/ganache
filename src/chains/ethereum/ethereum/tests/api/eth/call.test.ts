@@ -4,7 +4,7 @@ import getProvider from "../../helpers/getProvider";
 import compile, { CompileOutput } from "../../helpers/compile";
 import { join } from "path";
 import { BUFFER_EMPTY, Quantity, RPCQUANTITY_EMPTY } from "@ganache/utils";
-import { RETURN_TYPES, RuntimeError } from "@ganache/ethereum-utils";
+import { RETURN_TYPES, RuntimeError } from "@celo/ganache-ethereum-utils";
 
 describe("api", () => {
   describe("eth", () => {

@@ -11,7 +11,7 @@
   ],
   "references": [
     {
-      "name": "@ganache/ethereum-utils",
+      "name": "@celo/ganache-ethereum-utils",
       "path": "../utils"
     },
     {
@@ -23,7 +23,7 @@
       "path": "../../../packages/promise-queue"
     },
     {
-      "name": "@ganache/ethereum-options",
+      "name": "@celo/ganache-ethereum-options",
       "path": "../options"
     },
     {
@@ -35,7 +35,7 @@
       "path": "../../../packages/rlp"
     },
     {
-      "name": "@ganache/ethereum-transaction",
+      "name": "@celo/ganache-ethereum-transaction",
       "path": "../transaction"
     },
     {
@@ -43,7 +43,7 @@
       "path": "../address"
     },
     {
-      "name": "@ganache/ethereum-block",
+      "name": "@celo/ganache-ethereum-block",
       "path": "../block"
     },
     {

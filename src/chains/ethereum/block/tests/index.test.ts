@@ -6,11 +6,11 @@ import Wallet from "../../ethereum/src/wallet";
 import {
   TypedRpcTransaction,
   TransactionFactory
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import Blockchain from "../../ethereum/src/blockchain";
 import { EthereumOptionsConfig } from "../../options/src/index";
 
-describe("@ganache/ethereum-block", async () => {
+describe("@celo/ganache-ethereum-block", async () => {
   describe("baseFeePerGas calculations", () => {
     let blockchain: Blockchain;
     before(async function () {

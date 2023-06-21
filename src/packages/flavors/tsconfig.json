@@ -11,7 +11,7 @@
   ],
   "references": [
     {
-      "name": "@ganache/ethereum",
+      "name": "@celo/ganache-ethereum",
       "path": "../../chains/ethereum/ethereum"
     },
     {
@@ -23,7 +23,7 @@
       "path": "../utils"
     },
     {
-      "name": "@ganache/ethereum-options",
+      "name": "@celo/ganache-ethereum-options",
       "path": "../../chains/ethereum/options"
     },
     {

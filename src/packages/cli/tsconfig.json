@@ -11,11 +11,11 @@
   ],
   "references": [
     {
-      "name": "@ganache/core",
+      "name": "@celo/ganache-core",
       "path": "../core"
     },
     {
-      "name": "@ganache/flavors",
+      "name": "@celo/ganache-flavors",
       "path": "../flavors"
     },
     {
@@ -23,7 +23,7 @@
       "path": "../options"
     },
     {
-      "name": "@ganache/ethereum",
+      "name": "@celo/ganache-ethereum",
       "path": "../../chains/ethereum/ethereum"
     },
     {

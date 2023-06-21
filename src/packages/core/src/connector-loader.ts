@@ -1,6 +1,6 @@
 import { Executor, RequestCoordinator } from "@ganache/utils";
-import { DefaultFlavor, FlavorName } from "@ganache/flavors";
-import { GetConnector, Options as ProviderOptions } from "@ganache/flavors";
+import { DefaultFlavor, FlavorName } from "@celo/ganache-flavors";
+import { GetConnector, Options as ProviderOptions } from "@celo/ganache-flavors";
 
 const initialize = <T extends FlavorName = typeof DefaultFlavor>(
   options: ProviderOptions<T> = {

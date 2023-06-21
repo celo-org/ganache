@@ -1,10 +1,10 @@
-import { ConnectorsByName, DefaultFlavor, FlavorName } from "@ganache/flavors";
+import { ConnectorsByName, DefaultFlavor, FlavorName } from "@celo/ganache-flavors";
 import ConnectorLoader from "./src/connector-loader";
 import { ProviderOptions, ServerOptions } from "./src/options";
 import Server from "./src/server";
 export { Server, ServerStatus, _DefaultServerOptions } from "./src/server";
 
-export type { Provider, EthereumProvider, FilecoinProvider } from "@ganache/flavors";
+export type { Provider, EthereumProvider, FilecoinProvider } from "@celo/ganache-flavors";
 export type { ProviderOptions, ServerOptions } from "./src/options";
 
 /**

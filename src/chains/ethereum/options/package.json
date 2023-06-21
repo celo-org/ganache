@@ -1,9 +1,9 @@
 {
-  "name": "@ganache/ethereum-options",
+  "name": "@celo/ganache-ethereum-options",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
+  "version": "0.1.2-beta.2",
   "description": "",
   "author": "David Murdoch <david@trufflesuite.com> (https://davidmurdoch.com)",
   "homepage": "https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/options#readme",
@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "@ganache/ethereum-address": "0.1.1",
-    "@ganache/ethereum-utils": "0.1.1",
+    "@celo/ganache-ethereum-utils": "0.1.2-beta.2",
     "@ganache/options": "0.1.1",
     "@ganache/utils": "0.1.1",
     "bip39": "3.0.4",

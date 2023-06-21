@@ -18,7 +18,7 @@ import {
   TransactionTraceOptions,
   EthereumRawAccount,
   TraceTransactionResult
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import type { Address as EthereumJsAddress } from "ethereumjs-util";
 import type { InterpreterStep } from "@ethereumjs/vm/dist/evm/interpreter";
 import { decode } from "@ganache/rlp";
@@ -27,7 +27,7 @@ import Common from "@ethereumjs/common";
 import VM from "@ethereumjs/vm";
 import { EVMResult } from "@ethereumjs/vm/dist/evm/evm";
 import { VmError, ERROR } from "@ethereumjs/vm/dist/exceptions";
-import { EthereumInternalOptions, Hardfork } from "@ganache/ethereum-options";
+import { EthereumInternalOptions, Hardfork } from "@celo/ganache-ethereum-options";
 import {
   Quantity,
   Data,
@@ -51,8 +51,8 @@ import {
   TransactionReceipt,
   VmTransaction,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { Block, RuntimeBlock, Snapshots } from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-transaction";
+import { Block, RuntimeBlock, Snapshots } from "@celo/ganache-ethereum-block";
 import { SimulationTransaction } from "./helpers/run-call";
 import { ForkStateManager } from "./forking/state-manager";
 import {

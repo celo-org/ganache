@@ -1,5 +1,5 @@
 import Blockchain from "../blockchain";
-import { FilterArgs, RangeFilterArgs, Tag } from "@ganache/ethereum-utils";
+import { FilterArgs, RangeFilterArgs, Tag } from "@celo/ganache-ethereum-utils";
 import { Address } from "@ganache/ethereum-address";
 
 export function parseFilterDetails(

@@ -5,7 +5,7 @@ import Transaction from "@ethereumjs/tx/dist/legacyTransaction";
 import Common from "@ethereumjs/common";
 import { join } from "path";
 import compile from "../../helpers/compile";
-import { EthereumProviderOptions } from "@ganache/ethereum-options";
+import { EthereumProviderOptions } from "@celo/ganache-ethereum-options";
 import { Data } from "@ganache/utils";
 
 describe("api", () => {

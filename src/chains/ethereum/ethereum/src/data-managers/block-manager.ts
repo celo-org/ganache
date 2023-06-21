@@ -1,5 +1,5 @@
 import Manager from "./manager";
-import { Tag, QUANTITY } from "@ganache/ethereum-utils";
+import { Tag, QUANTITY } from "@celo/ganache-ethereum-utils";
 import { LevelUp } from "levelup";
 import { Quantity, Data } from "@ganache/utils";
 import type Common from "@ethereumjs/common";
@@ -8,13 +8,13 @@ import {
   Block,
   EthereumRawBlockHeader,
   serialize
-} from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-block";
 import { Address } from "@ganache/ethereum-address";
 import {
   GanacheRawBlockTransactionMetaData,
   TransactionFactory,
   TypedDatabaseTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 
 const NOTFOUND = 404;
 

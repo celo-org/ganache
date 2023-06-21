@@ -15,7 +15,7 @@
       "path": "../address"
     },
     {
-      "name": "@ganache/ethereum-transaction",
+      "name": "@celo/ganache-ethereum-transaction",
       "path": "../transaction"
     },
     {
@@ -27,7 +27,7 @@
       "path": "../../../packages/utils"
     },
     {
-      "name": "@ganache/ethereum-utils",
+      "name": "@celo/ganache-ethereum-utils",
       "path": "../utils"
     }
   ]

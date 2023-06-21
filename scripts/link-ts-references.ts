@@ -171,7 +171,7 @@ const configs: PackageInfo[] = packageDirectories.map((pkg: any) => {
     ...keys(packageJson.devDependencies),
     ...keys(packageJson.peerDependencies),
     ...keys(packageJson.optionalDependencies)
-  ].filter(name => name.startsWith("@ganache/") || name === "ganache");
+  ].filter(name => name.startsWith("@ganache/") || name.startsWith("@celo/ganache") || name === "ganache");
 
   return {
     modified: false,

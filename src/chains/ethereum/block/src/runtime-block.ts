@@ -14,8 +14,8 @@ import {
   TypedDatabaseTransaction,
   GanacheRawBlockTransactionMetaData,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { StorageKeys } from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-transaction";
+import { StorageKeys } from "@celo/ganache-ethereum-utils";
 
 /**
  * BN, but with an extra `buf` property that caches the original Buffer value

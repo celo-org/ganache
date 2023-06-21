@@ -18,7 +18,7 @@ const config: webpack.Configuration = merge({}, base, {
     "secp256k1",
     "keccak",
     {
-      "@ganache/core": path.resolve(
+      "@celo/ganache-core": path.resolve(
         __dirname,
         "../",
         "dist",

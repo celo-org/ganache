@@ -19,14 +19,14 @@ import {
   EthereumRawAccount,
   TransactionTraceOptions,
   TraceTransactionResult
-} from "@ganache/ethereum-utils";
-import { BaseFeeHeader, Block, RuntimeBlock } from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-utils";
+import { BaseFeeHeader, Block, RuntimeBlock } from "@celo/ganache-ethereum-block";
 import {
   TypedRpcTransaction,
   TransactionFactory,
   TypedTransaction,
   TypedTransactionJSON
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import { toRpcSig, ecsign, hashPersonalMessage } from "ethereumjs-util";
 import { TypedData as NotTypedData, signTypedData_v4 } from "eth-sig-util";
 import {
@@ -42,7 +42,7 @@ import {
   RPCQUANTITY_GWEI
 } from "@ganache/utils";
 import Blockchain from "./blockchain";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import Wallet from "./wallet";
 
 import Emittery from "emittery";
@@ -51,7 +51,7 @@ import { assertArgLength } from "./helpers/assert-arg-length";
 import { parseFilterDetails, parseFilterRange } from "./helpers/filter-parsing";
 import { decode } from "@ganache/rlp";
 import { Address } from "@ganache/ethereum-address";
-import { GanacheRawBlock } from "@ganache/ethereum-block";
+import { GanacheRawBlock } from "@celo/ganache-ethereum-block";
 import { Capacity } from "./miner/miner";
 
 async function autofillDefaultTransactionValues(

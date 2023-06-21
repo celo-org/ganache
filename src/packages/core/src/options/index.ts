@@ -2,7 +2,7 @@ import {
   DefaultFlavor,
   FlavorName,
   Options as FlavorOptions
-} from "@ganache/flavors";
+} from "@celo/ganache-flavors";
 import { ServerConfig, ServerOptions } from "./server-options";
 import {
   Defaults,

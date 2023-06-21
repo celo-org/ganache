@@ -5,7 +5,7 @@ import {
 } from "@trufflesuite/uws-js-unofficial";
 import WebSocketCloseCodes from "./utils/websocket-close-codes";
 import { InternalOptions } from "../options";
-import * as Flavors from "@ganache/flavors";
+import * as Flavors from "@celo/ganache-flavors";
 import { hasOwn, PromiEvent } from "@ganache/utils";
 import { isGeneratorFunction, isGeneratorObject } from "util/types";
 import { types } from "util";

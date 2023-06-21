@@ -1,14 +1,14 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { Data, Quantity, KNOWN_CHAINIDS } from "@ganache/utils";
 import AbortController from "abort-controller";
 import Common from "@ethereumjs/common";
 import { HttpHandler } from "./handlers/http-handler";
 import { WsHandler } from "./handlers/ws-handler";
 import { Handler } from "./types";
-import { Tag } from "@ganache/ethereum-utils";
-import { Block } from "@ganache/ethereum-block";
+import { Tag } from "@celo/ganache-ethereum-utils";
+import { Block } from "@celo/ganache-ethereum-block";
 import { Address } from "@ganache/ethereum-address";
-import { Account } from "@ganache/ethereum-utils";
+import { Account } from "@celo/ganache-ethereum-utils";
 import BlockManager from "../data-managers/block-manager";
 import { ProviderHandler } from "./handlers/provider-handler";
 import { PersistentCache } from "./persistent-cache/persistent-cache";

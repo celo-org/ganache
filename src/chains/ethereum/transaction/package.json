@@ -1,9 +1,9 @@
 {
-  "name": "@ganache/ethereum-transaction",
+  "name": "@celo/ganache-ethereum-transaction",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
+  "version": "0.1.2-beta.2",
   "description": "",
   "author": "David Murdoch",
   "homepage": "https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/transaction#readme",
@@ -50,7 +50,7 @@
   "dependencies": {
     "@ethereumjs/common": "2.6.0",
     "@ganache/ethereum-address": "0.1.1",
-    "@ganache/ethereum-utils": "0.1.1",
+    "@celo/ganache-ethereum-utils": "0.1.2-beta.2",
     "@ganache/rlp": "0.1.1",
     "@ganache/secp256k1": "0.1.1",
     "@ganache/utils": "0.1.1",

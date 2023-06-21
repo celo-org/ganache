@@ -26,7 +26,7 @@ import {
   EIP1559FeeMarketTransactionJSON
 } from "./transaction-types";
 import secp256k1 from "@ganache/secp256k1";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 
 function ecsign(msgHash: Uint8Array, privateKey: Uint8Array) {
   const object = { signature: new Uint8Array(64), recid: null };

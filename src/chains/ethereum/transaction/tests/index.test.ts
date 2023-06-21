@@ -19,7 +19,7 @@ import { decode } from "@ganache/rlp";
 import { EthereumOptionsConfig } from "../../options";
 import { BUFFER_EMPTY, Quantity } from "@ganache/utils";
 
-describe("@ganache/ethereum-transaction", async () => {
+describe("@celo/ganache-ethereum-transaction", async () => {
   const common = Common.forCustomChain(
     "mainnet",
     {

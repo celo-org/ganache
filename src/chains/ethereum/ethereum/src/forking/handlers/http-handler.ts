@@ -1,6 +1,6 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { JsonRpcResponse, JsonRpcError } from "@ganache/utils";
-import { AbortError, CodedError } from "@ganache/ethereum-utils";
+import { AbortError, CodedError } from "@celo/ganache-ethereum-utils";
 // TODO: support http2
 import http, { RequestOptions, Agent as HttpAgent } from "http";
 import https, { Agent as HttpsAgent } from "https";

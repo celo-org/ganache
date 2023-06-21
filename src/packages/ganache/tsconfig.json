@@ -9,21 +9,21 @@
     "src/cli.ts"
   ],
   "paths": {
-    "@ganache/cli/src/cli": [
+    "@celo/ganache-cli/src/cli": [
       "../cli/src/cli"
     ]
   },
   "references": [
     {
-      "name": "@ganache/cli",
+      "name": "@celo/ganache-cli",
       "path": "../cli"
     },
     {
-      "name": "@ganache/flavors",
+      "name": "@celo/ganache-flavors",
       "path": "../flavors"
     },
     {
-      "name": "@ganache/core",
+      "name": "@celo/ganache-core",
       "path": "../core"
     }
   ]

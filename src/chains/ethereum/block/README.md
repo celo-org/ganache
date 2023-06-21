@@ -1,3 +1,3 @@
-# `@ganache/ethereum-block`
+# `@celo/ganache-ethereum-block`
 
 > TODO: description

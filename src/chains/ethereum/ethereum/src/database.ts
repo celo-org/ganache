@@ -3,7 +3,7 @@ import Emittery from "emittery";
 import { dir, setGracefulCleanup } from "tmp-promise";
 // import levelup, { LevelUp } from "levelup";
 import Blockchain from "./blockchain";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import levelup from "levelup";
 import type { LevelUp } from "levelup";
 import leveldown from "leveldown";

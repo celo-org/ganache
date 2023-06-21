@@ -1,4 +1,4 @@
-import { DefaultFlavor, FilecoinFlavorName } from "@ganache/flavors";
+import { DefaultFlavor, FilecoinFlavorName } from "@celo/ganache-flavors";
 import { Definitions } from "@ganache/options";
 
 export type ServerConfig = {

@@ -5,10 +5,10 @@ import {
   TransactionFactory,
   TypedRpcTransaction,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import Blockchain from "../../src/blockchain";
 import Wallet from "../../src/wallet";
-import { EthereumOptionsConfig } from "@ganache/ethereum-options";
+import { EthereumOptionsConfig } from "@celo/ganache-ethereum-options";
 
 describe("miner", async () => {
   describe("pre-london transaction ordering", () => {});
