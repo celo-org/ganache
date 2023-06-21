@@ -9,7 +9,7 @@
     "src/cli.ts"
   ],
   "paths": {
-    "@celo/ganache-cli/src/cli": [
+    "@ganache-cli/src/cli": [
       "../cli/src/cli"
     ]
   },
