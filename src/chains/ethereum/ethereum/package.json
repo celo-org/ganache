@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.2-beta.2",
+  "version": "0.1.2-beta.3",
   "description": "Ganache's Ethereum client implementation",
   "author": "David Murdoch <david@trufflesuite.com> (https://davidmurdoch.com)",
   "homepage": "https://github.com/trufflesuite/ganache/tree/develop/src/ethereum/ethereum#readme",
@@ -55,10 +55,10 @@
     "@ethereumjs/tx": "3.4.0",
     "@ethereumjs/vm": "npm:@celo/ethereumjs-vm@5.6.1",
     "@ganache/ethereum-address": "0.1.1",
-    "@celo/ganache-ethereum-block": "0.1.2-beta.2",
-    "@celo/ganache-ethereum-options": "0.1.2-beta.2",
-    "@celo/ganache-ethereum-transaction": "0.1.2-beta.2",
-    "@celo/ganache-ethereum-utils": "0.1.2-beta.2",
+    "@celo/ganache-ethereum-block": "0.1.2-beta.3",
+    "@celo/ganache-ethereum-options": "0.1.2-beta.3",
+    "@celo/ganache-ethereum-transaction": "0.1.2-beta.3",
+    "@celo/ganache-ethereum-utils": "0.1.2-beta.3",
     "@ganache/options": "0.1.1",
     "@ganache/promise-queue": "0.1.1",
     "@ganache/rlp": "0.1.1",

@@ -3,82 +3,18 @@ import type {
   StateManager
 } from "@ethereumjs/vm/dist/state";
 import { Account, Address } from "ethereumjs-util";
+import { celoRegistryProxy } from "./precompiled-contracts";
 
 const NUM_PRECOMPILES = 18;
 /**
  * An account with a balance of 1
  */
 const SERIALIZED_PRECOMPILE = Uint8Array.from([
-  248,
-  68,
-  128,
-  1,
-  160,
-  86,
-  232,
-  31,
-  23,
-  27,
-  204,
-  85,
-  166,
-  255,
-  131,
-  69,
-  230,
-  146,
-  192,
-  248,
-  110,
-  91,
-  72,
-  224,
-  27,
-  153,
-  108,
-  173,
-  192,
-  1,
-  98,
-  47,
-  181,
-  227,
-  99,
-  180,
-  33,
-  160,
-  197,
-  210,
-  70,
-  1,
-  134,
-  247,
-  35,
-  60,
-  146,
-  126,
-  125,
-  178,
-  220,
-  199,
-  3,
-  192,
-  229,
-  0,
-  182,
-  83,
-  202,
-  130,
-  39,
-  59,
-  123,
-  250,
-  216,
-  4,
-  93,
-  133,
-  164,
-  112
+  248, 68, 128, 1, 160, 86, 232, 31, 23, 27, 204, 85, 166, 255, 131, 69, 230,
+  146, 192, 248, 110, 91, 72, 224, 27, 153, 108, 173, 192, 1, 98, 47, 181, 227,
+  99, 180, 33, 160, 197, 210, 70, 1, 134, 247, 35, 60, 146, 126, 125, 178, 220,
+  199, 3, 192, 229, 0, 182, 83, 202, 130, 39, 59, 123, 250, 216, 4, 93, 133,
+  164, 112
 ]);
 const PRECOMPILED_ACCOUNT: Account = {
   serialize: () => SERIALIZED_PRECOMPILE
@@ -103,6 +39,18 @@ export const activatePrecompiles = async (stateManager: StateManager) => {
   const cache = (stateManager as any)._cache;
   for (let i = 1; i <= NUM_PRECOMPILES; i++) {
     const account = makeAccount(i);
+    if (i === 1) {
+      const registryProxy = celoRegistryProxy(account);
+      await stateManager.putContractCode(
+        registryProxy.address,
+        registryProxy.code
+      );
+      await stateManager.putContractStorage(
+        registryProxy.address,
+        registryProxy.storageKey,
+        registryProxy.storageValue
+      );
+    }
     cache.put(account, PRECOMPILED_ACCOUNT);
     stateManager.touchAccount(account as any);
   }
