@@ -71,6 +71,7 @@ import {
   VmBeforeTransactionEvent,
   VmStepEvent
 } from "./provider-events";
+import { celoRegistryProxy } from "./helpers/precompiled-contracts";
 
 import mcl from "mcl-wasm";
 const mclInitPromise = mcl.init(mcl.BLS12_381).then(() => {
@@ -710,6 +711,31 @@ export default class Blockchain extends Emittery<BlockchainTypedEvents> {
           block,
           blockLogs: BlockLogs.create(hash)
         }));
+    }else{
+      // commit accounts, but for forking.
+      const stateManager = <DefaultStateManager>this.vm.stateManager;
+      await stateManager.checkpoint();
+
+
+      // XXX: <CELO> Pre-deploy registry contract at static address
+      const registryProxy = celoRegistryProxy(initialAccounts[0]);
+      await stateManager.putContractCode(
+        registryProxy.address,
+        registryProxy.code
+      );
+      await stateManager.putContractStorage(
+        registryProxy.address,
+        registryProxy.storageKey,
+        registryProxy.storageValue
+      );
+      // </CELO>
+
+      initialAccounts.forEach(acc => {
+        const a = { buf: acc.address.toBuffer() } as any;
+        (stateManager as any)._cache.put(a, acc);
+        stateManager.touchAccount(a);
+      });
+      await stateManager.commit();
     }
 
     await this.#commitAccounts(initialAccounts);
