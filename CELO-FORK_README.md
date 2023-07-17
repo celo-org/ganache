@@ -3,6 +3,8 @@ Github actions and workflows have been disabled to prevent auto publishing. Inst
 
 ***NB: Make sure you are using node 14 when developing in this repo.***
 
+If node-GYP errors are encountered, following [this](https://github.com/nodejs/node-gyp/blob/main/docs/Force-npm-to-use-global-node-gyp.md) usually fixes the issue on macOS
+
 This fork of `ganache monorepo` is dependent on the CELO compatible fork of [ethereumjs monorepo](https://github.com/celo-org/ethereumjs-monorepo). This means that any changes to the ethereumjs monorepo must first be published to `NPM` or a local `verdaccio` server before they can be accessed here.
 
 ### Steps to take before publishing to NPM:
