@@ -55,7 +55,7 @@
     "@ethereumjs/trie": "5.0.4",
     "@ethereumjs/tx": "4.1.1",
     "@ethereumjs/util": "8.0.5",
-    "@ethereumjs/vm": "npm:@soloseng/ethereumjs-vm@6.4.1",
+    "@ethereumjs/vm": "npm:@celo/ethereumjs-vm@6.4.1-unofficial.0",
     "@ganache/console.log": "0.4.0",
     "@ganache/ethereum-address": "0.8.0",
     "@celo/ganache-ethereum-block": "0.8.0-beta.0",
