@@ -3,7 +3,6 @@ import type {
   StateManager
 } from "@ethereumjs/vm/dist/state";
 import { Account, Address } from "ethereumjs-util";
-import { celoRegistryProxy } from "./precompiled-contracts";
 
 const NUM_PRECOMPILES = 18;
 /**
@@ -39,18 +38,6 @@ export const activatePrecompiles = async (stateManager: StateManager) => {
   const cache = (stateManager as any)._cache;
   for (let i = 1; i <= NUM_PRECOMPILES; i++) {
     const account = makeAccount(i);
-    if (i === 1) {
-      const registryProxy = celoRegistryProxy(account);
-      await stateManager.putContractCode(
-        registryProxy.address,
-        registryProxy.code
-      );
-      await stateManager.putContractStorage(
-        registryProxy.address,
-        registryProxy.storageKey,
-        registryProxy.storageValue
-      );
-    }
     cache.put(account, PRECOMPILED_ACCOUNT);
     stateManager.touchAccount(account as any);
   }

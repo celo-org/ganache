@@ -1,3 +1,4 @@
+import { Account } from "@celo/ganache-ethereum-utils";
 import { Address, toBuffer } from "ethereumjs-util";
 
 const proxyCode = toBuffer(
@@ -7,9 +8,9 @@ const unstructuredStorageOwnerKey = toBuffer(
   "0x34dc5a2556b2030988481969696f29fed38d45813d8003f6c70e5c16ac92ae0f"
 );
 
-export const celoRegistryProxy = (owner: Address) => ({
+export const celoRegistryProxy = (owner: Account) => ({
   address: Address.fromString("0x000000000000000000000000000000000000ce10"),
   storageKey: unstructuredStorageOwnerKey,
-  storageValue: owner.toBuffer(),
+  storageValue: owner.address.toBuffer(),
   code: proxyCode,
 });
