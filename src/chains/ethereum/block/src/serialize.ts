@@ -6,7 +6,7 @@ import {
   LegacyRawTransaction,
   TransactionFactory,
   TypedRawTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import {
   digest,
   encodeLength,

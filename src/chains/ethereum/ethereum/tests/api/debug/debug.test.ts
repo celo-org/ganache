@@ -5,14 +5,14 @@ import { EthereumProvider } from "../../../src/provider";
 import path from "path";
 import { Quantity, Data } from "@ganache/utils";
 
-import { Account, TraceStorageMap } from "@ganache/ethereum-utils";
+import { Account, TraceStorageMap } from "@celo/ganache-ethereum-utils";
 import { Common } from "@ethereumjs/common";
-import { EthereumOptionsConfig } from "@ganache/ethereum-options";
+import { EthereumOptionsConfig } from "@celo/ganache-ethereum-options";
 import { Address } from "@ganache/ethereum-address";
 import {
   LegacyTransaction,
   TransactionFactory
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import Blockchain from "../../../src/blockchain";
 
 describe("api", () => {

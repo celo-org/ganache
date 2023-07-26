@@ -6,7 +6,7 @@ import { Dirent, promises as fsPromises } from "fs";
 // this awkward import is required to support node 12
 const { readFile, mkdir, readdir, rmdir, writeFile, unlink } = fsPromises;
 import path from "path";
-import { FlavorName } from "@ganache/flavors";
+import { FlavorName } from "@celo/ganache-flavors";
 
 export type DetachedInstance = {
   name: string;

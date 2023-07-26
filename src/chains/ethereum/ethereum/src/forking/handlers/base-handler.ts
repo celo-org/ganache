@@ -1,10 +1,10 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { hasOwn, JsonRpcError } from "@ganache/utils";
 import { AbortSignal } from "abort-controller";
 import { OutgoingHttpHeaders } from "http";
 import RateLimiter from "../rate-limiter/rate-limiter";
 import LRU from "lru-cache";
-import { AbortError, CodedError } from "@ganache/ethereum-utils";
+import { AbortError, CodedError } from "@celo/ganache-ethereum-utils";
 import { PersistentCache } from "../persistent-cache/persistent-cache";
 
 const INVALID_RESPONSE = "Invalid response from fork provider: ";

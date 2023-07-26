@@ -1,4 +1,4 @@
-import { KNOWN_NETWORKS } from "@ganache/ethereum-options";
+import { KNOWN_NETWORKS } from "@celo/ganache-ethereum-options";
 import getProvider from "../helpers/getProvider";
 import http from "http";
 import ganache from "../../../../../packages/core";
@@ -16,7 +16,7 @@ import {
 } from "./helpers";
 import compile from "../helpers/compile";
 import path from "path";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 
 async function deployContract(
   remoteProvider: EthereumProvider,

@@ -11,11 +11,11 @@ import {
   TRANSACTION_LOCKED,
   INSUFFICIENT_FUNDS,
   INITCODE_TOO_LARGE
-} from "@ganache/ethereum-utils";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-utils";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { Executables } from "./miner/executables";
-import { TypedTransaction } from "@ganache/ethereum-transaction";
-import { Block } from "@ganache/ethereum-block";
+import { TypedTransaction } from "@celo/ganache-ethereum-transaction";
+import { Block } from "@celo/ganache-ethereum-block";
 
 /**
  * Checks if the `replacer` is eligible to replace the `replacee` transaction

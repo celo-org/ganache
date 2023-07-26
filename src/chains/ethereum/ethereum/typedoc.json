@@ -1,5 +1,5 @@
 {
-  "name": "@ganache/ethereum",
+  "name": "@celo/ganache-ethereum",
   "excludeExternals": true,
   "categoryOrder": [],
   "exclude": ["**/test/*"]

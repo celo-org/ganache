@@ -5,8 +5,8 @@ import {
   TransactionFactory,
   Transaction,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { EthereumOptionsConfig } from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-transaction";
+import { EthereumOptionsConfig } from "@celo/ganache-ethereum-options";
 import { Data, Heap, Quantity } from "@ganache/utils";
 import Wallet from "../src/wallet";
 import TransactionPool from "../src/transaction-pool";

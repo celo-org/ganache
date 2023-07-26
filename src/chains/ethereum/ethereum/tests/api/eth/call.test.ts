@@ -4,19 +4,19 @@ import getProvider from "../../helpers/getProvider";
 import compile, { CompileOutput } from "../../helpers/compile";
 import { join } from "path";
 import { BUFFER_32_ZERO, BUFFER_EMPTY, Data, Quantity } from "@ganache/utils";
-import { CallError } from "@ganache/ethereum-utils";
+import { CallError } from "@celo/ganache-ethereum-utils";
 import Blockchain from "../../../src/blockchain";
 import Wallet from "../../../src/wallet";
 import { Address } from "@ganache/ethereum-address";
 import { SimulationTransaction } from "../../../src/helpers/run-call";
-import { Block, RuntimeBlock } from "@ganache/ethereum-block";
+import { Block, RuntimeBlock } from "@celo/ganache-ethereum-block";
 import {
   LegacyRpcTransaction,
   TransactionFactory
-} from "@ganache/ethereum-transaction";
-import { EthereumOptionsConfig } from "@ganache/ethereum-options";
+} from "@celo/ganache-ethereum-transaction";
+import { EthereumOptionsConfig } from "@celo/ganache-ethereum-options";
 import { GanacheTrie } from "../../../src/helpers/trie";
-import { Transaction } from "@ganache/ethereum-transaction";
+import { Transaction } from "@celo/ganache-ethereum-transaction";
 import { KECCAK256_RLP } from "@ethereumjs/util";
 
 const encodeValue = (val: number | string) => {

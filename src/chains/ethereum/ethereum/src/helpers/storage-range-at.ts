@@ -5,7 +5,7 @@ import type { LevelUp } from "levelup";
 import type {
   StorageRangeAtResult,
   StorageRecords
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import { Trie } from "@ethereumjs/trie";
 
 type TrieData = { key: Buffer; value: Buffer };

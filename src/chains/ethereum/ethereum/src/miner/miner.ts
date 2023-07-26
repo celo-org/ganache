@@ -4,7 +4,7 @@ import {
   RETURN_TYPES,
   TraceDataFactory,
   StorageKeys
-} from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-utils";
 import {
   Quantity,
   BUFFER_EMPTY,
@@ -18,12 +18,12 @@ import { Trie } from "@ethereumjs/trie";
 import Emittery from "emittery";
 import { DefaultStateManager } from "@ethereumjs/statemanager";
 import { VM } from "@ethereumjs/vm";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import replaceFromHeap from "./replace-from-heap";
 import { EVMResult } from "@ethereumjs/evm";
-import { Params, TypedTransaction } from "@ganache/ethereum-transaction";
+import { Params, TypedTransaction } from "@celo/ganache-ethereum-transaction";
 import { Executables } from "./executables";
-import { Block, RuntimeBlock } from "@ganache/ethereum-block";
+import { Block, RuntimeBlock } from "@celo/ganache-ethereum-block";
 import {
   makeStepEvent,
   VmAfterTransactionEvent,

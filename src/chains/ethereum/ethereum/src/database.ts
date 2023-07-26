@@ -6,14 +6,14 @@ import type {
 import Emittery from "emittery";
 import { dir, setGracefulCleanup } from "tmp-promise";
 import Blockchain from "./blockchain";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import sub from "subleveldown";
 import encode from "encoding-down";
 import leveldown from "leveldown";
 import type { LevelUp } from "levelup";
 import { TrieDB } from "./trie-db";
 import { BUFFER_ZERO, VERSION_KEY } from "@ganache/utils";
-import { Block } from "@ganache/ethereum-block";
+import { Block } from "@celo/ganache-ethereum-block";
 const levelup = require("levelup");
 
 export type GanacheLevelUp = LevelUp<

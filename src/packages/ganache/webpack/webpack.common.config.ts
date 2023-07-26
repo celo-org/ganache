@@ -14,6 +14,8 @@ const GANACHE_FILECOIN_VERSION = require(join(
 )).version;
 
 let INFURA_KEY = process.env.INFURA_KEY;
+
+// TODO: (@soloseng) add Infura key?
 // if we don't have an INFURA_KEY at build time we should bail!
 if (
   !INFURA_KEY &&
@@ -48,6 +50,9 @@ const base: webpack.Configuration = {
         ]
       }
     ]
+  },
+  experiments: {
+    topLevelAwait: true
   },
   resolve: {
     extensions: [".ts", ".js"]

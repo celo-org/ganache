@@ -10,13 +10,13 @@ import {
   FilterTypes,
   QUANTITY,
   EthereumRawAccount
-} from "@ganache/ethereum-utils";
-import { BaseFeeHeader, Block, RuntimeBlock } from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-utils";
+import { BaseFeeHeader, Block, RuntimeBlock } from "@celo/ganache-ethereum-block";
 import {
   Transaction,
   TransactionFactory,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import {
   toRpcSig,
   hashPersonalMessage,
@@ -37,7 +37,7 @@ import {
   max
 } from "@ganache/utils";
 import Blockchain from "./blockchain";
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import Wallet from "./wallet";
 
 import Emittery from "emittery";
@@ -49,7 +49,7 @@ import { assertArgLength } from "./helpers/assert-arg-length";
 import { parseFilterDetails, parseFilterRange } from "./helpers/filter-parsing";
 import { decode } from "@ganache/rlp";
 import { Address } from "@ganache/ethereum-address";
-import { GanacheRawBlock } from "@ganache/ethereum-block";
+import { GanacheRawBlock } from "@celo/ganache-ethereum-block";
 import { Capacity } from "./miner/miner";
 import { Ethereum } from "./api-types";
 

@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import { TruffleColors } from "@ganache/colors";
 import { WEI } from "@ganache/utils";
-import type { EthereumProvider } from "@ganache/ethereum";
+import type { EthereumProvider } from "@celo/ganache-ethereum";
 import { toChecksumAddress } from "@ethereumjs/util";
 import { CliSettings } from "../types";
 

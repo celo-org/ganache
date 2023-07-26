@@ -5,16 +5,11 @@
     "declarationDir": "typings",
     "composite": true
   },
-  "include": ["index.ts", "src/**/*"],
+  "include": [
+    "index.ts",
+    "src/**/*"
+  ],
   "references": [
-    {
-      "name": "@ganache/ethereum",
-      "path": "../../chains/ethereum/ethereum"
-    },
-    {
-      "name": "@ganache/flavors",
-      "path": "../flavors"
-    },
     {
       "name": "@ganache/options",
       "path": "../options"
@@ -26,6 +21,14 @@
     {
       "name": "@ganache/utils",
       "path": "../utils"
+    },
+    {
+      "name": "@celo/ganache-ethereum",
+      "path": "../../chains/ethereum/ethereum"
+    },
+    {
+      "name": "@celo/ganache-flavors",
+      "path": "../flavors"
     }
   ]
 }

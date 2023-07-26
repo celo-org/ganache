@@ -1,4 +1,4 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { BaseHandler } from "./base-handler";
 import { Handler } from "../types";
 import { AbortSignal } from "abort-controller";

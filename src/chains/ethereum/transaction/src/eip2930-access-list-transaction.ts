@@ -20,7 +20,7 @@ import {
   Capability,
   EIP2930AccessListTransactionJSON
 } from "./transaction-types";
-import { CodedError } from "@ganache/ethereum-utils";
+import { CodedError } from "@celo/ganache-ethereum-utils";
 
 const CAPABILITIES = [2718, 2930];
 

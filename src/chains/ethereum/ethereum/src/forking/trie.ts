@@ -7,7 +7,7 @@ import { CheckpointDB } from "@ethereumjs/trie";
 
 import * as lexico from "./lexicographic-key-codec";
 import { encode } from "@ganache/rlp";
-import { Account } from "@ganache/ethereum-utils";
+import { Account } from "@celo/ganache-ethereum-utils";
 import { KECCAK256_NULL } from "@ethereumjs/util";
 import { TrieDB } from "../trie-db";
 import { GanacheLevelUp } from "../database";

@@ -5,7 +5,7 @@ import {
   GanacheRawExtraTx,
   TypedTransaction,
   TypedTransactionJSON
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import type { Common } from "@ethereumjs/common";
 import { encode, decode } from "@ganache/rlp";
 import { BlockHeader, makeHeader } from "./runtime-block";

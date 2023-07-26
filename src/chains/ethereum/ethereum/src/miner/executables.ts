@@ -1,4 +1,4 @@
-import { TypedTransaction } from "@ganache/ethereum-transaction";
+import { TypedTransaction } from "@celo/ganache-ethereum-transaction";
 import { Heap } from "@ganache/utils";
 
 export type Executables = {

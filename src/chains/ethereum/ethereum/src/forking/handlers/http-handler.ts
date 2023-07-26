@@ -1,6 +1,6 @@
-import { EthereumInternalOptions } from "@ganache/ethereum-options";
+import { EthereumInternalOptions } from "@celo/ganache-ethereum-options";
 import { JsonRpcResponse, JsonRpcError } from "@ganache/utils";
-import { AbortError } from "@ganache/ethereum-utils";
+import { AbortError } from "@celo/ganache-ethereum-utils";
 // TODO: support http2
 // Issue: https://github.com/trufflesuite/ganache/issues/3474
 import http, { RequestOptions, Agent as HttpAgent } from "http";
@@ -112,6 +112,8 @@ export class HttpHandler extends BaseHandler implements Handler {
       const postData = `${JSONRPC_PREFIX}${this.id++},${key.slice(1)}`;
       this.headers["content-length"] = postData.length;
 
+      // TODO: soloseng
+      // @ts-ignore:
       const req = this._request(requestOptions);
       req.on("response", res => {
         const { headers } = res;

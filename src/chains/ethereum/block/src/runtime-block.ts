@@ -12,8 +12,8 @@ import {
   encodeWithPrefix,
   GanacheRawBlockTransactionMetaData,
   TypedTransaction
-} from "@ganache/ethereum-transaction";
-import { StorageKeys } from "@ganache/ethereum-utils";
+} from "@celo/ganache-ethereum-transaction";
+import { StorageKeys } from "@celo/ganache-ethereum-utils";
 import { Common } from "@ethereumjs/common";
 
 export type BlockHeader = {

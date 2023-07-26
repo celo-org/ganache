@@ -1,4 +1,4 @@
-import { DefaultFlavor, FlavorName, FlavorOptions } from "@ganache/flavors";
+import { DefaultFlavor, FlavorName, FlavorOptions } from "@celo/ganache-flavors";
 import { ServerConfig, ServerOptions } from "./server-options";
 import {
   Defaults,

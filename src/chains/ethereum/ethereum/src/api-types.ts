@@ -1,11 +1,11 @@
 import type * as EthSigUtil from "eth-sig-util";
-import type * as TransactionTypes from "@ganache/ethereum-transaction";
-import type * as UtilTypes from "@ganache/ethereum-utils";
+import type * as TransactionTypes from "@celo/ganache-ethereum-transaction";
+import type * as UtilTypes from "@celo/ganache-ethereum-utils";
 import type { EthereumProvider, Externalize } from "./provider";
-import { BlockHeader, Withdrawal } from "@ganache/ethereum-block";
+import { BlockHeader,Withdrawal } from "@celo/ganache-ethereum-block";
 import { Data, Quantity } from "@ganache/utils";
 import { CallOverrides } from "./helpers/run-call";
-import { Log, InternalTag } from "@ganache/ethereum-utils";
+import { Log, InternalTag } from "@celo/ganache-ethereum-utils";
 
 type EthSignedDataParams = Parameters<
   typeof EthSigUtil.signTypedData_v4

@@ -1,5 +1,5 @@
 import Manager from "./manager";
-import { Tag, QUANTITY } from "@ganache/ethereum-utils";
+import { Tag, QUANTITY } from "@celo/ganache-ethereum-utils";
 import { Quantity, Data, BUFFER_ZERO } from "@ganache/utils";
 import type { Common } from "@ethereumjs/common";
 import Blockchain from "../blockchain";
@@ -11,14 +11,14 @@ import {
   Head,
   serialize,
   WithdrawalRaw
-} from "@ganache/ethereum-block";
+} from "@celo/ganache-ethereum-block";
 import { Address } from "@ganache/ethereum-address";
 import {
   encodeWithPrefix,
   GanacheRawBlockTransactionMetaData,
   GanacheRawExtraTx,
   TransactionFactory
-} from "@ganache/ethereum-transaction";
+} from "@celo/ganache-ethereum-transaction";
 import { GanacheLevelUp } from "../database";
 import { Ethereum } from "../api-types";
 import { encode } from "@ganache/rlp";
