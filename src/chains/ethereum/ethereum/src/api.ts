@@ -1602,11 +1602,11 @@ export default class EthereumApi implements Api {
    * @returns Integer of the current gas price in wei.
    * @example
    * ```javascript
-   * const gasPrice = await provider.request({ method: "eth_gasPrice", params: [] });
+   * const gasPrice = await provider.request({ method: "eth_gasPrice", params: [feeCurrency] });
    * console.log(gasPrice);
    * ```
    */
-  @assertArgLength(0)
+  @assertArgLength(0, 1)
   async eth_gasPrice() {
     return this.#options.miner.defaultGasPrice;
   }
