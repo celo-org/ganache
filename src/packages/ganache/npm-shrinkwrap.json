@@ -1,6 +1,6 @@
 {
 	"name": "@celo/ganache",
-	"version": "7.8.0-unofficial.0",
+	"version": "7.8.0-unofficial.1",
 	"lockfileVersion": 1,
 	"requires": true,
 	"dependencies": {
