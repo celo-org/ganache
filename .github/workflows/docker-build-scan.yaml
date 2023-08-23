@@ -8,3 +8,4 @@ jobs:
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd-local.yaml@main
     with:
       dockerfile: src/packages/ganache/Dockerfile
+#
