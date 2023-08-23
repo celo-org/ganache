@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Install-node-gyp:
+  install-node-gyp:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
@@ -13,6 +13,7 @@ jobs:
       - run: npm install --global node-gyp@latest
       - run: npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
   Build-Scan-Container:
+    needs: install-node-gyp
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd-local.yaml@main
     with:
       dockerfile: src/packages/ganache/Dockerfile
