@@ -7,14 +7,13 @@ jobs:
   Install-node-gyp:
     runs-on: ubuntu-latest
     steps:
-      - name: install node gyp with npm
-        run: |
-            "npm install --global node-gyp@latest"
-      - name: config node gyp
-        run: |
-            "npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js"
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - run: npm install --global node-gyp@latest
+      - run: npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
   Build-Scan-Container:
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd-local.yaml@main
     with:
       dockerfile: src/packages/ganache/Dockerfile
-#
+
